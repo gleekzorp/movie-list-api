@@ -16,7 +16,7 @@ Cloud.config.update = ({
     'api_secret': os.environ.get('CLOUDINARY_API_SECRET')
 })
 
-app.config["SQLALCHEMY_DATABASE_URI"] = os.environ.get('HEROKU_POSTGRESS_URI')
+app.config["SQLALCHEMY_DATABASE_URI"] = os.environ.get('DATABASE_URL')
 
 db = SQLAlchemy(app)
 ma = Marshmallow(app)
